@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelos;
 
 namespace Estructuras
 {
-    internal class NodoPila
+    public class NodoPila
     {
+        public Ataque Ataque;
+        public NodoPila siguiente;
     }
 }

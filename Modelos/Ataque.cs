@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    internal class Ataque
+    public class Ataque
     {
+        //atributos con sus getters y setters para buenas prácticas de POO
+        public string nombre { get; set; }
+        public string dano { get; set; }
+
+
+        // Constructor de la clase Ataque
+        public Ataque(string nombre, string dano)
+        {
+            this.nombre = nombre;
+            this.dano = dano;
+        }
     }
 }

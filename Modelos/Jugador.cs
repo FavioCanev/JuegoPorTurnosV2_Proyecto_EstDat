@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    internal class Jugador
+    public class Jugador : Criatura
     {
+        public string clase { get; set; }
+
+        public Jugador(string nombre, int vida, string clase) : base(nombre, vida)
+        //el base se utiliza para llamar de nuevo al constructor de Criatura y así no tener que poner de nuevo el this.nombre, this.vida, etc
+        //solo reutilizar el constructor de la clase base más el atributo de la clase hija: Jugador
+        {
+            this.clase = clase;
+        }
     }
 }

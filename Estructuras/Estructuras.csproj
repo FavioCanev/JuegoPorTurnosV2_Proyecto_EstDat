@@ -42,14 +42,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColaTurnos.cs" />
-    <Compile Include="ListaAtaques.cs" />
     <Compile Include="ListaZonas.cs" />
-    <Compile Include="NodoAtaque.cs" />
     <Compile Include="NodoCola.cs" />
     <Compile Include="NodoPila.cs" />
     <Compile Include="NodoZona.cs" />
     <Compile Include="PilaHistorial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grafo\Grafo.csproj">
+      <Project>{ba3af430-af6b-4171-b569-8864c51a54d7}</Project>
+      <Name>Grafo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{b36e3be1-2864-45bb-9c25-d95ba35f6094}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

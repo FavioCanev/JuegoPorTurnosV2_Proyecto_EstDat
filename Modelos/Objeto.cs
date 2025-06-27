@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    internal class Objeto
+    public class Objeto
     {
+        public string nombre { get; set; }
+        public string tipo { get; set; } // aumento de vida o de daño
+        public int valor { get; set; }
+
+        public Objeto(string nombre, string tipo, int valor)
+        {
+            this.nombre = nombre;
+            this.tipo = tipo.ToLower(); // para evitar errores al comparar
+            this.valor = valor;
+        }
     }
 }
