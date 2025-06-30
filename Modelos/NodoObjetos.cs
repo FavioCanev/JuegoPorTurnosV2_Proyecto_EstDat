@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class NodoAtaque
+    public class NodoObjetos
     {
-        public Ataque ataque;
-        public NodoAtaque siguiente = null;
-        public NodoAtaque anterior = null;
+        public Objeto objeto;
+        public NodoObjetos siguiente = null;
+        public NodoObjetos anterior = null;
     }
 }

@@ -10,11 +10,11 @@ namespace Modelos
     {
         //atributos con sus getters y setters para buenas prácticas de POO
         public string nombre { get; set; }
-        public string dano { get; set; }
+        public int dano { get; set; }
 
 
         // Constructor de la clase Ataque
-        public Ataque(string nombre, string dano)
+        public Ataque(string nombre, int dano)
         {
             this.nombre = nombre;
             this.dano = dano;

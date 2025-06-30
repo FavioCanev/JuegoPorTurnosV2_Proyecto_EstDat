@@ -46,7 +46,9 @@
     <Compile Include="Criatura.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="ListaAtaques.cs" />
+    <Compile Include="ListaObjetos.cs" />
     <Compile Include="NodoAtaque.cs" />
+    <Compile Include="NodoObjetos.cs" />
     <Compile Include="Objeto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

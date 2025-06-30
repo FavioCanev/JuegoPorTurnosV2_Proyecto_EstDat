@@ -21,8 +21,8 @@ namespace Estructuras
             //matríz por defecto para conectar el mapa
             ma = new int[,]
             {
-                { 0,1,1,0,0,0,0},
-                {0,0,1,1,0,0,0},
+                {0,1,1,0,0,0,0 },
+                {0,0,1,1,0,0,0 },
                 {0,1,0,1,0,0,0 },
                 {0,0,0,0,1,1,0 },
                 {0,0,0,0,0,1,1 },
