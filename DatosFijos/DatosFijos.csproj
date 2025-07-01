@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtaquesFijos.cs" />
     <Compile Include="BossesFijos.cs" />
     <Compile Include="ClasesFijas.cs" />
     <Compile Include="ObjetosFijos.cs" />
