@@ -8,18 +8,24 @@ namespace Modelos
 {
     public abstract class Criatura
     {
-        public string nombre { get; set; }
-        public int vida { get; set; }
-        public ListaAtaques ataques { get; set; }
+        public string nombre;
+        public int vida;
+        public ListaAtaques ataques;
 
         //para verificar si la criatura está viva(solo es de lectura, no modificable)
-        public bool estaVivo => vida > 0;
 
         public Criatura(string nombre, int vida)
         {
             this.nombre = nombre;
             this.vida = vida;
-            this.ataques = new ListaAtaques();
+        }
+        public bool estaVivo()
+        {
+            if (vida > 0)
+            {
+                return true; //si la vida es mayor a 0, la criatura está viva
+            }
+            return false; //si la vida es 0 o menor, la criatura está viva
         }
     }
 }

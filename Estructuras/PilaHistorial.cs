@@ -32,7 +32,11 @@ namespace Estructuras
         
         public bool estaVacia() //si la cima es null, la pila está vacía
         {
-            return cima == null; 
+            if (cima == null)
+            {
+                return true; // La pila está vacía
+            }
+            return false; // La pila no está vacía
         }
 
         public void mostrarDesdeElUltimo()

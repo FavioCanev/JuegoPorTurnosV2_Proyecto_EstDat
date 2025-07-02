@@ -130,5 +130,53 @@ namespace Jugabilidad
             listaZonas.navegarGrafo(listaZonas.inicioLista);
         }
 
+        private void aplicarObjeto(Objeto objetoObtenido)
+        {
+            Console.WriteLine($"\nHas obtenido el objeto: {objetoObtenido.nombre}");
+
+            if(objetoObtenido.tipo == "vida")
+            {
+                jugador.vida = jugador.vida + objetoObtenido.valor;
+                Console.WriteLine($"Tu vida ha aumentado en +{objetoObtenido.valor} puntos\nVida actual: {jugador.vida}");
+            }
+            else if (objetoObtenido.tipo == "dano")
+            {
+                for (int i = 0; i < jugador.ataques.obtenerTamano()/*aquí podría también haber usado un getLenght en lugar de crear un método solo para sacar el tamaño, solo que me di cuenta ya tarde xd*/; i++)
+                {
+                    Ataque ataque = jugador.ataques.obtenerPorIndice(i);
+                    ataque.dano = ataque.dano + objetoObtenido.valor;
+                    Console.WriteLine($"El ataque {ataque.nombre} ha aumentado su daño en +{objetoObtenido.valor} puntos");
+                }
+                Console.WriteLine($"Todos tus ataques han aumentado en +{objetoObtenido.valor} puntos de daño.");
+            }
+
+            Console.WriteLine("Presiona cualquier tecla para continuar...");
+            Console.ReadKey();
+        }
+
+        public void mostrarResultadoFinal(bool resultado, Combate combate)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            if (resultado)
+            {
+                Console.WriteLine("¡FELICITACIONES! Has derrotado a todos los bosses");
+                Console.WriteLine("El mundo ha sido salvado por tu valor\n");
+            }
+            else
+            {
+                Console.WriteLine("Has sido derrotado...");
+                Console.WriteLine("El mundo ha caído en la oscuridad\n");
+            }
+
+            Console.ResetColor();
+
+            Console.WriteLine("===== HISTORIAL DE COMBATE =====\n");
+            combate.mostrarHistorialDeAtaques();
+
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+        }
     }
 }
