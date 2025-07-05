@@ -58,6 +58,7 @@ namespace DatosFijos
             agregarJugador(new ClasesFijas().crearLadron());
         }
 
+        //este método nos sirve para comparar el texto del ComboBox con el guardado en la lista de jugadores, para así luego pasarselo como parámetro al Mapa.cs para que nos muestre la imagen del personaje que hemos seleccionado
         public Jugador buscarPersonajePorNombre(String nombreBuscado)
         {
             for (int i = 0; i < tamano; i++)

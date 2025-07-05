@@ -30,14 +30,14 @@
         {
             this.btnZonaForSen = new System.Windows.Forms.Button();
             this.btnZonaAnor = new System.Windows.Forms.Button();
-            this.btnZonaTumbGig = new System.Windows.Forms.Button();
-            this.btnZonaValleDrag = new System.Windows.Forms.Button();
+            this.btnZonaFarumAz = new System.Windows.Forms.Button();
+            this.btnZonaArbMiq = new System.Windows.Forms.Button();
             this.btnZonaAbis = new System.Windows.Forms.Button();
             this.btnZonaHorno = new System.Windows.Forms.Button();
             this.lblForSen = new System.Windows.Forms.Label();
             this.lblAnorLon = new System.Windows.Forms.Label();
-            this.lblTumbGig = new System.Windows.Forms.Label();
-            this.lblValleDrag = new System.Windows.Forms.Label();
+            this.lblFarumAz = new System.Windows.Forms.Label();
+            this.lblArbMiq = new System.Windows.Forms.Label();
             this.lblAbis = new System.Windows.Forms.Label();
             this.lblHorno = new System.Windows.Forms.Label();
             this.lblSantEnl = new System.Windows.Forms.Label();
@@ -77,35 +77,35 @@
             this.btnZonaAnor.Text = "ir";
             this.btnZonaAnor.UseVisualStyleBackColor = false;
             // 
-            // btnZonaTumbGig
+            // btnZonaFarumAz
             // 
-            this.btnZonaTumbGig.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnZonaTumbGig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnZonaTumbGig.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnZonaTumbGig.FlatAppearance.BorderSize = 10;
-            this.btnZonaTumbGig.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnZonaTumbGig.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaTumbGig.Location = new System.Drawing.Point(610, 309);
-            this.btnZonaTumbGig.Name = "btnZonaTumbGig";
-            this.btnZonaTumbGig.Size = new System.Drawing.Size(53, 44);
-            this.btnZonaTumbGig.TabIndex = 2;
-            this.btnZonaTumbGig.Text = "ir";
-            this.btnZonaTumbGig.UseVisualStyleBackColor = false;
+            this.btnZonaFarumAz.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnZonaFarumAz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZonaFarumAz.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnZonaFarumAz.FlatAppearance.BorderSize = 10;
+            this.btnZonaFarumAz.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnZonaFarumAz.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZonaFarumAz.Location = new System.Drawing.Point(610, 309);
+            this.btnZonaFarumAz.Name = "btnZonaFarumAz";
+            this.btnZonaFarumAz.Size = new System.Drawing.Size(53, 44);
+            this.btnZonaFarumAz.TabIndex = 2;
+            this.btnZonaFarumAz.Text = "ir";
+            this.btnZonaFarumAz.UseVisualStyleBackColor = false;
             // 
-            // btnZonaValleDrag
+            // btnZonaArbMiq
             // 
-            this.btnZonaValleDrag.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnZonaValleDrag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnZonaValleDrag.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnZonaValleDrag.FlatAppearance.BorderSize = 10;
-            this.btnZonaValleDrag.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnZonaValleDrag.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaValleDrag.Location = new System.Drawing.Point(861, 134);
-            this.btnZonaValleDrag.Name = "btnZonaValleDrag";
-            this.btnZonaValleDrag.Size = new System.Drawing.Size(53, 44);
-            this.btnZonaValleDrag.TabIndex = 3;
-            this.btnZonaValleDrag.Text = "ir";
-            this.btnZonaValleDrag.UseVisualStyleBackColor = false;
+            this.btnZonaArbMiq.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnZonaArbMiq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZonaArbMiq.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btnZonaArbMiq.FlatAppearance.BorderSize = 10;
+            this.btnZonaArbMiq.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnZonaArbMiq.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZonaArbMiq.Location = new System.Drawing.Point(861, 134);
+            this.btnZonaArbMiq.Name = "btnZonaArbMiq";
+            this.btnZonaArbMiq.Size = new System.Drawing.Size(53, 44);
+            this.btnZonaArbMiq.TabIndex = 3;
+            this.btnZonaArbMiq.Text = "ir";
+            this.btnZonaArbMiq.UseVisualStyleBackColor = false;
             // 
             // btnZonaAbis
             // 
@@ -157,25 +157,25 @@
             this.lblAnorLon.TabIndex = 7;
             this.lblAnorLon.Text = "Prueba2";
             // 
-            // lblTumbGig
+            // lblFarumAz
             // 
-            this.lblTumbGig.AutoSize = true;
-            this.lblTumbGig.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTumbGig.Location = new System.Drawing.Point(595, 283);
-            this.lblTumbGig.Name = "lblTumbGig";
-            this.lblTumbGig.Size = new System.Drawing.Size(88, 23);
-            this.lblTumbGig.TabIndex = 8;
-            this.lblTumbGig.Text = "Prueba3";
+            this.lblFarumAz.AutoSize = true;
+            this.lblFarumAz.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFarumAz.Location = new System.Drawing.Point(595, 283);
+            this.lblFarumAz.Name = "lblFarumAz";
+            this.lblFarumAz.Size = new System.Drawing.Size(88, 23);
+            this.lblFarumAz.TabIndex = 8;
+            this.lblFarumAz.Text = "Prueba3";
             // 
-            // lblValleDrag
+            // lblArbMiq
             // 
-            this.lblValleDrag.AutoSize = true;
-            this.lblValleDrag.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValleDrag.Location = new System.Drawing.Point(844, 104);
-            this.lblValleDrag.Name = "lblValleDrag";
-            this.lblValleDrag.Size = new System.Drawing.Size(90, 23);
-            this.lblValleDrag.TabIndex = 9;
-            this.lblValleDrag.Text = "Prueba4";
+            this.lblArbMiq.AutoSize = true;
+            this.lblArbMiq.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArbMiq.Location = new System.Drawing.Point(844, 104);
+            this.lblArbMiq.Name = "lblArbMiq";
+            this.lblArbMiq.Size = new System.Drawing.Size(90, 23);
+            this.lblArbMiq.TabIndex = 9;
+            this.lblArbMiq.Text = "Prueba4";
             // 
             // lblAbis
             // 
@@ -240,19 +240,20 @@
             this.Controls.Add(this.lblSantEnl);
             this.Controls.Add(this.lblHorno);
             this.Controls.Add(this.lblAbis);
-            this.Controls.Add(this.lblValleDrag);
-            this.Controls.Add(this.lblTumbGig);
+            this.Controls.Add(this.lblArbMiq);
+            this.Controls.Add(this.lblFarumAz);
             this.Controls.Add(this.lblAnorLon);
             this.Controls.Add(this.lblForSen);
             this.Controls.Add(this.btnZonaHorno);
             this.Controls.Add(this.btnZonaAbis);
-            this.Controls.Add(this.btnZonaValleDrag);
-            this.Controls.Add(this.btnZonaTumbGig);
+            this.Controls.Add(this.btnZonaArbMiq);
+            this.Controls.Add(this.btnZonaFarumAz);
             this.Controls.Add(this.btnZonaAnor);
             this.Controls.Add(this.btnZonaForSen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mapa";
             this.Text = "Mapa";
+            this.Load += new System.EventHandler(this.Mapa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pj)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,14 +264,14 @@
 
         private System.Windows.Forms.Button btnZonaForSen;
         private System.Windows.Forms.Button btnZonaAnor;
-        private System.Windows.Forms.Button btnZonaTumbGig;
-        private System.Windows.Forms.Button btnZonaValleDrag;
+        private System.Windows.Forms.Button btnZonaFarumAz;
+        private System.Windows.Forms.Button btnZonaArbMiq;
         private System.Windows.Forms.Button btnZonaAbis;
         private System.Windows.Forms.Button btnZonaHorno;
         private System.Windows.Forms.Label lblForSen;
         private System.Windows.Forms.Label lblAnorLon;
-        private System.Windows.Forms.Label lblTumbGig;
-        private System.Windows.Forms.Label lblValleDrag;
+        private System.Windows.Forms.Label lblFarumAz;
+        private System.Windows.Forms.Label lblArbMiq;
         private System.Windows.Forms.Label lblAbis;
         private System.Windows.Forms.Label lblHorno;
         private System.Windows.Forms.Label lblSantEnl;

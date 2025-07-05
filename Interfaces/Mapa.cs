@@ -15,11 +15,13 @@ namespace Interfaces
 {
     public partial class Mapa : Form
     {
-        private NodoZona zonaActual;
+        public ListaZonas listaZonas = new ListaZonas(7);
         public Mapa(Bitmap img)
         {
             InitializeComponent();
             pj.Image = img;
+            listaZonas.asignarZonasBossesObjetos();
+            mostrarLabelsDeZona();
         }
 
         private void btnZonaForSen_Click(object sender, EventArgs e)
@@ -33,6 +35,22 @@ namespace Interfaces
             Inicio inicio = new Inicio();
             SeleccionPersonaje seleccionPersonaje = new SeleccionPersonaje(inicio);
             seleccionPersonaje.Show();
+        }
+
+        private void mostrarLabelsDeZona()
+        {
+            lblSantEnl.Text = listaZonas.obtenerZonaPorIndice(0).nombrZona;
+            lblForSen.Text = listaZonas.obtenerZonaPorIndice(1).nombrZona;
+            lblAnorLon.Text = listaZonas.obtenerZonaPorIndice(2).nombrZona;
+            lblFarumAz.Text = listaZonas.obtenerZonaPorIndice(3).nombrZona;
+            lblArbMiq.Text = listaZonas.obtenerZonaPorIndice(4).nombrZona;
+            lblAbis.Text = listaZonas.obtenerZonaPorIndice(5).nombrZona;
+            lblHorno.Text = listaZonas.obtenerZonaPorIndice(6).nombrZona;
+        }
+
+        private void Mapa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,19 +13,22 @@ namespace Estructuras
     {
         public NodoZona inicioLista = null;
         public int[,] ma;
+        private int tamano = 0; //para saber cuántas zonas hay en la lista
+        
+        
 
         public ListaZonas(int n) //constructor
         {
             ma = new int [n, n];
+            //listaBosses.asignarBosses(); //mete los bosses a la lista
+            //objetosFijos.crearObjetos(); //mete los objetos a un Array
         }
         //métodos para la lista enlazada
         
         public void registrarVerticeZona(Zona zona) //este método es para que no se ingresen más zonas de las que permite la matriz de adyacencia
         {
-            for (int i = 0; i < ma.GetLength(0); i++)
-            {
-                insertarZonaALista(zona); //insertamos la zona en la lista
-            }
+            insertarZonaALista(zona);
+            tamano++;
         }
 
         private void insertarZonaALista(Zona zona)
@@ -48,7 +51,19 @@ namespace Estructuras
             }
         }
 
-
+        public Zona obtenerZonaPorIndice(int indice)
+        {
+            if (indice < 0 || indice >= tamano)
+            {
+                return null; // o también se podría lanzar una excepción
+            }
+            NodoZona actual = inicioLista;
+            for (int i = 0; i < indice; i++)
+            {
+                actual = actual.siguiente;
+            }
+            return actual.zona;
+        }
 
         //métodos para la matriz
         private void llenarMatriz()
@@ -279,15 +294,30 @@ namespace Estructuras
         {
             Random random = new Random();
             int[] numeros = new int[ma.GetLength(0)];
-            for (int i = 0; i < numeros.Length; i++)
+            int cantidad = 0;
+
+            while (cantidad < numeros.Length)
             {
-                int numeroNuevo;
-                do
+                int numeroNuevo = random.Next(0, ma.GetLength(0));
+                bool repetido = false;
+
+                for (int i = 0; i < cantidad; i++) // Solo verifica hasta los ya llenados
                 {
-                    numeroNuevo = random.Next(1, ma.GetLength(0) + 1);// +1 para que nos devvuelva números entre 1 y 7
-                } while (numeros.Contains(numeroNuevo)); //verifica si el número ya está en el arreglo
-                numeros[i] = numeroNuevo;
+                    if (numeros[i] == numeroNuevo)
+                    {
+                        repetido = true;
+                        break;
+                    }
+                }
+
+                if (!repetido)
+                {
+                    numeros[cantidad] = numeroNuevo;
+                    Console.WriteLine(numeroNuevo);
+                    cantidad++;
+                }
             }
+
             return numeros;
         }
 
@@ -295,33 +325,40 @@ namespace Estructuras
         public void asignarZonasBossesObjetos()
         {
             ListaBosses listaBosses = new ListaBosses();
+            listaBosses.asignarBosses(); //llama al método que asigna los bosses a la lista
             ObjetosFijos objetosFijos = new ObjetosFijos();
-            listaBosses.asignarBosses(); //mete los bosses a la lista
-            objetosFijos.crearObjetos(); //mete los objetos a un Array
+            objetosFijos.crearObjetos(); //llama al método que crea los objetos y los guarda en un array
             int[] numerosRandom = validarNumeroRepetidos(); //llama al método que valida los números repetidos
 
-            Zona zona0 = new Zona("Santuario de enlace", listaBosses.obtenerBossPorIndice(numerosRandom[0]), objetosFijos.crearObjetos()[numerosRandom[0]]);
+            //mi hipótesis es que lo que falta es iniciar/instanciar/rellenar la lista de bosses y el array de objetos, ya que están vacías. Lo pienso porque me dice que el número 0/1 está fuera de los índices de la matríz lo que significa que la listaBosses está vacía
 
+            //el problema: no se cómo hacerlo, ya que no tengo acceso a los métodos de las clases de DatosFijos desde aquí. Por lo tanto, creo que lo mejor es crear un método en la clase ListaZonas que se encargue de asignar los bosses y objetos a las zonas, y llamarlo desde el constructor de la clase Mapa
+
+            //segunda hipótesis, se detiene en el índice donde el random ha generado el número 7, el error dice: Fuera de los indices de la matríz, cuando intento bajar el rango con el que se generan los números aleatorios se me congela la ventana en el formulario de selección de personaje
+            
+            Zona zona0 = new Zona("Santuario de enlace", listaBosses.obtenerBossPorIndice(numerosRandom[0]), objetosFijos.crearObjetos()[numerosRandom[0]]);
+            registrarVerticeZona(zona0);
+            
             Zona zona1 = new Zona("Fortaleza de Sen", listaBosses.obtenerBossPorIndice(numerosRandom[1]), objetosFijos.crearObjetos()[numerosRandom[1]]);
-            
+            registrarVerticeZona(zona1);
+
             Zona zona2 = new Zona("Anor Londo", listaBosses.obtenerBossPorIndice(numerosRandom[2]), objetosFijos.crearObjetos()[numerosRandom[2]]);
-            
+            registrarVerticeZona(zona2);
+           
             Zona zona3 = new Zona("Farum Azula", listaBosses.obtenerBossPorIndice(numerosRandom[3]), objetosFijos.crearObjetos()[numerosRandom[3]]);
+            registrarVerticeZona(zona3);
             
             Zona zona4 = new Zona("Árbol de Miquella", listaBosses.obtenerBossPorIndice(numerosRandom[4]), objetosFijos.crearObjetos()[numerosRandom[4]]);
+            registrarVerticeZona(zona4);
 
             Zona zona5 = new Zona("El Abismo", listaBosses.obtenerBossPorIndice(numerosRandom[5]), objetosFijos.crearObjetos()[numerosRandom[5]]);
+            registrarVerticeZona(zona5);
 
             Zona zona6 = new Zona("Horno de la primera llama", listaBosses.obtenerBossPorIndice(numerosRandom[6]), objetosFijos.crearObjetos()[numerosRandom[6]]);
+            registrarVerticeZona(zona6);
 
             // se registran las zonas con nombres predeterminados
-            registrarVerticeZona(zona0);
-            registrarVerticeZona(zona1);
-            registrarVerticeZona(zona2);
-            registrarVerticeZona(zona3);
-            registrarVerticeZona(zona4);
-            registrarVerticeZona(zona5);
-            registrarVerticeZona(zona6);
+            
         }
 
         public void conectarListaAGrafo()

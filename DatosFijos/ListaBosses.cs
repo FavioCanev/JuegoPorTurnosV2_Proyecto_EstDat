@@ -31,7 +31,7 @@ namespace DatosFijos
             tamano++;
         }
 
-        public Boss obtenerBossPorIndice(int indice) //método para obtener un ataque por su índice/orden en la lista
+        public Boss obtenerBossPorIndice(int indice) //método para obtener un boss por su índice/orden en la lista
         {
             if (indice < 0 || indice >= tamano)
             {
