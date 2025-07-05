@@ -19,8 +19,8 @@ namespace Estructuras
             ma = new int [n, n];
         }
         //métodos para la lista enlazada
-        //este método es para que no se ingresen más zonas de las que permite la matriz de adyacencia 
-        public void registrarVerticeZona(Zona zona)
+        
+        public void registrarVerticeZona(Zona zona) //este método es para que no se ingresen más zonas de las que permite la matriz de adyacencia
         {
             for (int i = 0; i < ma.GetLength(0); i++)
             {
@@ -51,7 +51,7 @@ namespace Estructuras
 
 
         //métodos para la matriz
-        public void llenarMatriz()
+        private void llenarMatriz()
         {
             //matríz por defecto para conectar el mapa
             ma = new int[,]
@@ -275,22 +275,53 @@ namespace Estructuras
         }
 
 
+        private int[] validarNumeroRepetidos()
+        {
+            Random random = new Random();
+            int[] numeros = new int[ma.GetLength(0)];
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                int numeroNuevo;
+                do
+                {
+                    numeroNuevo = random.Next(1, ma.GetLength(0) + 1);// +1 para que nos devvuelva números entre 1 y 7
+                } while (numeros.Contains(numeroNuevo)); //verifica si el número ya está en el arreglo
+                numeros[i] = numeroNuevo;
+            }
+            return numeros;
+        }
+
         //método para asignar bosses y objetos a las zonas
         public void asignarZonasBossesObjetos()
         {
             ListaBosses listaBosses = new ListaBosses();
             ObjetosFijos objetosFijos = new ObjetosFijos();
-            Random random = new Random();
-            listaBosses.asignarBosses();
-            objetosFijos.crearObjetos();
-            for (int i = 0; i < ma.GetLength(0); i++)
-            {
-                string nombreZona = "Zona " + (i + 1);
-                Boss bossZona = listaBosses.obtenerBossPorIndice(random.Next(listaBosses.obtenerTamanoBosses()));
-                Objeto recompensa = objetosFijos.crearObjetos()[random.Next(0, objetosFijos.crearObjetos().Length)];
-                Zona zona = new Zona(nombreZona, bossZona, recompensa);
-                registrarVerticeZona(zona);
-            }
+            listaBosses.asignarBosses(); //mete los bosses a la lista
+            objetosFijos.crearObjetos(); //mete los objetos a un Array
+            int[] numerosRandom = validarNumeroRepetidos(); //llama al método que valida los números repetidos
+
+            Zona zona0 = new Zona("Santuario de enlace", listaBosses.obtenerBossPorIndice(numerosRandom[0]), objetosFijos.crearObjetos()[numerosRandom[0]]);
+
+            Zona zona1 = new Zona("Fortaleza de Sen", listaBosses.obtenerBossPorIndice(numerosRandom[1]), objetosFijos.crearObjetos()[numerosRandom[1]]);
+            
+            Zona zona2 = new Zona("Anor Londo", listaBosses.obtenerBossPorIndice(numerosRandom[2]), objetosFijos.crearObjetos()[numerosRandom[2]]);
+            
+            Zona zona3 = new Zona("Farum Azula", listaBosses.obtenerBossPorIndice(numerosRandom[3]), objetosFijos.crearObjetos()[numerosRandom[3]]);
+            
+            Zona zona4 = new Zona("Árbol de Miquella", listaBosses.obtenerBossPorIndice(numerosRandom[4]), objetosFijos.crearObjetos()[numerosRandom[4]]);
+
+            Zona zona5 = new Zona("El Abismo", listaBosses.obtenerBossPorIndice(numerosRandom[5]), objetosFijos.crearObjetos()[numerosRandom[5]]);
+
+            Zona zona6 = new Zona("Horno de la primera llama", listaBosses.obtenerBossPorIndice(numerosRandom[6]), objetosFijos.crearObjetos()[numerosRandom[6]]);
+
+            // se registran las zonas con nombres predeterminados
+            registrarVerticeZona(zona0);
+            registrarVerticeZona(zona1);
+            registrarVerticeZona(zona2);
+            registrarVerticeZona(zona3);
+            registrarVerticeZona(zona4);
+            registrarVerticeZona(zona5);
+            registrarVerticeZona(zona6);
         }
 
         public void conectarListaAGrafo()

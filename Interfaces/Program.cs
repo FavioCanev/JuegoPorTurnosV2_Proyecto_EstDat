@@ -20,7 +20,7 @@ namespace Interfaces
 
             // Se crea una instancia de ListaZonas para pasarla como argumento al constructor de Inicio  
             ListaZonas zonas = new ListaZonas(7);
-            Application.Run(new Inicio(zonas));
+            Application.Run(new Inicio());
         }
     }
 }

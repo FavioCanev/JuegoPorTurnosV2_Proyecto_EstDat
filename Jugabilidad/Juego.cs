@@ -120,7 +120,7 @@ namespace Jugabilidad
                     actual.siguiente = nodo;
                 }
             }
-            listaZonas.llenarMatriz();
+            //listaZonas.llenarMatriz();
             listaZonas.crearGrafo();
         }
 

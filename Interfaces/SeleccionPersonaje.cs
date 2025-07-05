@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using DatosFijos;
 using Estructuras;
 using Modelos;
@@ -16,13 +18,9 @@ namespace Interfaces
     public partial class SeleccionPersonaje : Form
     {
         ListaJugador lj = new ListaJugador();
-        private Form ventanaAnterior;
-        private ListaZonas listaZonas; // Declaración de la instancia de ListaZonas  
 
-        public SeleccionPersonaje(Form anterior, ListaZonas zonas)
+        public SeleccionPersonaje(Form anterior) //guardamos la referencia al formulario anterior
         {
-            ventanaAnterior = anterior; // Guardamos la referencia al formulario anterior  
-            listaZonas = zonas; // Asignamos la instancia de ListaZonas  
 
             lj.asignarPersonaje(); // Asignamos los personajes a la lista  
 
@@ -41,17 +39,7 @@ namespace Interfaces
             string personajeSeleccionado = CB_CuadroDesplegablePersonajes.SelectedItem.ToString();
 
             // Buscar el jugador por nombre  
-            Jugador jugadorSeleccionado = null;
-            int total = lj.obtenerTamanoJugadores();
-            for (int i = 0; i < total; i++)
-            {
-                Jugador j = lj.obtenerJugadorPorIndice(i);
-                if (j.nombre == personajeSeleccionado)
-                {
-                    jugadorSeleccionado = j;
-                    break;
-                }
-            }
+            Jugador jugadorSeleccionado = lj.buscarPersonajePorNombre(personajeSeleccionado);
 
             if (jugadorSeleccionado != null)
             {
@@ -82,31 +70,28 @@ namespace Interfaces
 
         private void BT_Atras_Click(object sender, EventArgs e)
         {
-            ventanaAnterior.Show(); // Muestra el formulario anterior  
+            Inicio inicio = new Inicio();
+            inicio.Show(); // Muestra el formulario anterior  
             this.Close(); // Cierra el formulario actual  
         }
 
         private void BT_Confirmar_Click(object sender, EventArgs e)
         {
+
+            //Aunque el catch evita que la aplicación se cierre abruptamente, es mejor prevenir la excepción comprobando explícitamente si hay un elemento seleccionado antes de intentar acceder a él
             if (CB_CuadroDesplegablePersonajes.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, selecciona un personaje antes de continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string personajeSeleccionado = CB_CuadroDesplegablePersonajes.SelectedItem.ToString();
+
+            string personajeSeleccionado = CB_CuadroDesplegablePersonajes.SelectedItem.ToString();//guarda el personaje seleccionado en un string
+
             // Buscar el jugador por nombre  
-            Jugador jugadorSeleccionado = null;
-            int total = lj.obtenerTamanoJugadores();
-            for (int i = 0; i < total; i++)
-            {
-                Jugador j = lj.obtenerJugadorPorIndice(i);
-                if (j.nombre == personajeSeleccionado)
-                {
-                    jugadorSeleccionado = j;
-                    break;
-                }
-            }
-            Bitmap img = null;
+            Jugador jugadorSeleccionado = lj.buscarPersonajePorNombre(personajeSeleccionado);
+
+            Bitmap img = null;//un bitmap es una imagen que se puede manipular en C#
+
             // Cambia la imagen según el nombre  
             if (jugadorSeleccionado.nombre == "Orstein asesino de dragones")
             {
@@ -120,7 +105,7 @@ namespace Interfaces
             {
                 img = Interfaces.Properties.Resources.Ranni_removebg_preview;
             }
-            Mapa mapa = new Mapa(listaZonas,img); // Usamos la instancia de ListaZonas  
+            Mapa mapa = new Mapa(img); // Usamos la instancia de ListaZonas y le pasamos la imagen del personaje seleccionado como parámetro al constructor del mapa
             this.Hide(); // Oculta el formulario de selección de personaje
             mapa.Show(); // Muestra el mapa  }
         }

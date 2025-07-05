@@ -14,12 +14,11 @@ namespace Interfaces
 {
     public partial class Inicio : Form
     {
-        private ListaZonas listaZonas; // Add this field to store the required parameter  
+        //private ListaZonas listaZonas;
 
-        public Inicio(ListaZonas zonas) // Modify the constructor to accept ListaZonas  
+        public Inicio()
         {
             InitializeComponent();
-            listaZonas = zonas; // Initialize the field  
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -29,14 +28,15 @@ namespace Interfaces
 
         private void BT_Inicio_Click(object sender, EventArgs e)
         {
-            SeleccionPersonaje seleccionPersonaje = new SeleccionPersonaje(this, listaZonas);
+            SeleccionPersonaje seleccionPersonaje = new SeleccionPersonaje(this);
             this.Hide(); // Oculta el formulario de inicio  
             seleccionPersonaje.Show();
         }
 
         private void BT_Salir_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit(); // Cierra todas las ventanas y detiene la ejecución del programa
+            //no usamos this.Close() porque solo cierra la ventana actual(donde se ejecuta), no cierra el programa por completo
         }
     }
 }

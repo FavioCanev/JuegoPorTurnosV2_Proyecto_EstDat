@@ -13,7 +13,7 @@ namespace DatosFijos
         NodoBosses fin = null;
         int tamano = 0;
 
-        public void agregarBoss(Boss boss)
+        private void agregarBoss(Boss boss)
         {
             NodoBosses nuevo = new NodoBosses();
             nuevo.boss = boss;

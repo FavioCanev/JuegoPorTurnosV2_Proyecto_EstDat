@@ -44,7 +44,7 @@
     <Compile Include="BossesFijos.cs" />
     <Compile Include="ClasesFijas.cs" />
     <Compile Include="ListaBosses.cs" />
-    <Compile Include="ListaPersonajes.cs" />
+    <Compile Include="ListaJugador.cs" />
     <Compile Include="NodoBosses.cs" />
     <Compile Include="NodoJugador.cs" />
     <Compile Include="ObjetosFijos.cs" />

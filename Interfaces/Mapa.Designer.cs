@@ -42,6 +42,7 @@
             this.lblHorno = new System.Windows.Forms.Label();
             this.lblSantEnl = new System.Windows.Forms.Label();
             this.pj = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pj)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,13 +54,12 @@
             this.btnZonaForSen.FlatAppearance.BorderSize = 10;
             this.btnZonaForSen.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaForSen.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaForSen.Location = new System.Drawing.Point(321, 143);
+            this.btnZonaForSen.Location = new System.Drawing.Point(342, 134);
             this.btnZonaForSen.Name = "btnZonaForSen";
             this.btnZonaForSen.Size = new System.Drawing.Size(53, 44);
             this.btnZonaForSen.TabIndex = 0;
             this.btnZonaForSen.Text = "ir";
             this.btnZonaForSen.UseVisualStyleBackColor = false;
-            this.btnZonaForSen.Visible = false;
             this.btnZonaForSen.Click += new System.EventHandler(this.btnZonaForSen_Click);
             // 
             // btnZonaAnor
@@ -70,7 +70,7 @@
             this.btnZonaAnor.FlatAppearance.BorderSize = 10;
             this.btnZonaAnor.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaAnor.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaAnor.Location = new System.Drawing.Point(321, 500);
+            this.btnZonaAnor.Location = new System.Drawing.Point(342, 491);
             this.btnZonaAnor.Name = "btnZonaAnor";
             this.btnZonaAnor.Size = new System.Drawing.Size(53, 44);
             this.btnZonaAnor.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.btnZonaTumbGig.FlatAppearance.BorderSize = 10;
             this.btnZonaTumbGig.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaTumbGig.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaTumbGig.Location = new System.Drawing.Point(589, 318);
+            this.btnZonaTumbGig.Location = new System.Drawing.Point(610, 309);
             this.btnZonaTumbGig.Name = "btnZonaTumbGig";
             this.btnZonaTumbGig.Size = new System.Drawing.Size(53, 44);
             this.btnZonaTumbGig.TabIndex = 2;
@@ -100,7 +100,7 @@
             this.btnZonaValleDrag.FlatAppearance.BorderSize = 10;
             this.btnZonaValleDrag.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaValleDrag.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaValleDrag.Location = new System.Drawing.Point(840, 143);
+            this.btnZonaValleDrag.Location = new System.Drawing.Point(861, 134);
             this.btnZonaValleDrag.Name = "btnZonaValleDrag";
             this.btnZonaValleDrag.Size = new System.Drawing.Size(53, 44);
             this.btnZonaValleDrag.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.btnZonaAbis.FlatAppearance.BorderSize = 10;
             this.btnZonaAbis.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaAbis.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaAbis.Location = new System.Drawing.Point(840, 500);
+            this.btnZonaAbis.Location = new System.Drawing.Point(861, 491);
             this.btnZonaAbis.Name = "btnZonaAbis";
             this.btnZonaAbis.Size = new System.Drawing.Size(53, 44);
             this.btnZonaAbis.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.btnZonaHorno.FlatAppearance.BorderSize = 10;
             this.btnZonaHorno.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnZonaHorno.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZonaHorno.Location = new System.Drawing.Point(1086, 318);
+            this.btnZonaHorno.Location = new System.Drawing.Point(1107, 309);
             this.btnZonaHorno.Name = "btnZonaHorno";
             this.btnZonaHorno.Size = new System.Drawing.Size(53, 44);
             this.btnZonaHorno.TabIndex = 5;
@@ -141,7 +141,7 @@
             // 
             this.lblForSen.AutoSize = true;
             this.lblForSen.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForSen.Location = new System.Drawing.Point(303, 113);
+            this.lblForSen.Location = new System.Drawing.Point(324, 104);
             this.lblForSen.Name = "lblForSen";
             this.lblForSen.Size = new System.Drawing.Size(87, 23);
             this.lblForSen.TabIndex = 6;
@@ -151,7 +151,7 @@
             // 
             this.lblAnorLon.AutoSize = true;
             this.lblAnorLon.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnorLon.Location = new System.Drawing.Point(303, 465);
+            this.lblAnorLon.Location = new System.Drawing.Point(324, 456);
             this.lblAnorLon.Name = "lblAnorLon";
             this.lblAnorLon.Size = new System.Drawing.Size(89, 23);
             this.lblAnorLon.TabIndex = 7;
@@ -161,7 +161,7 @@
             // 
             this.lblTumbGig.AutoSize = true;
             this.lblTumbGig.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTumbGig.Location = new System.Drawing.Point(574, 292);
+            this.lblTumbGig.Location = new System.Drawing.Point(595, 283);
             this.lblTumbGig.Name = "lblTumbGig";
             this.lblTumbGig.Size = new System.Drawing.Size(88, 23);
             this.lblTumbGig.TabIndex = 8;
@@ -171,7 +171,7 @@
             // 
             this.lblValleDrag.AutoSize = true;
             this.lblValleDrag.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValleDrag.Location = new System.Drawing.Point(823, 113);
+            this.lblValleDrag.Location = new System.Drawing.Point(844, 104);
             this.lblValleDrag.Name = "lblValleDrag";
             this.lblValleDrag.Size = new System.Drawing.Size(90, 23);
             this.lblValleDrag.TabIndex = 9;
@@ -181,7 +181,7 @@
             // 
             this.lblAbis.AutoSize = true;
             this.lblAbis.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbis.Location = new System.Drawing.Point(823, 465);
+            this.lblAbis.Location = new System.Drawing.Point(844, 456);
             this.lblAbis.Name = "lblAbis";
             this.lblAbis.Size = new System.Drawing.Size(88, 23);
             this.lblAbis.TabIndex = 10;
@@ -191,7 +191,7 @@
             // 
             this.lblHorno.AutoSize = true;
             this.lblHorno.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorno.Location = new System.Drawing.Point(1066, 292);
+            this.lblHorno.Location = new System.Drawing.Point(1087, 283);
             this.lblHorno.Name = "lblHorno";
             this.lblHorno.Size = new System.Drawing.Size(89, 23);
             this.lblHorno.TabIndex = 11;
@@ -201,7 +201,7 @@
             // 
             this.lblSantEnl.AutoSize = true;
             this.lblSantEnl.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSantEnl.Location = new System.Drawing.Point(75, 292);
+            this.lblSantEnl.Location = new System.Drawing.Point(96, 283);
             this.lblSantEnl.Name = "lblSantEnl";
             this.lblSantEnl.Size = new System.Drawing.Size(90, 23);
             this.lblSantEnl.TabIndex = 12;
@@ -209,12 +209,25 @@
             // 
             // pj
             // 
-            this.pj.Location = new System.Drawing.Point(79, 318);
+            this.pj.Location = new System.Drawing.Point(1, 456);
             this.pj.Name = "pj";
-            this.pj.Size = new System.Drawing.Size(86, 96);
+            this.pj.Size = new System.Drawing.Size(185, 218);
             this.pj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pj.TabIndex = 13;
             this.pj.TabStop = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAtras.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAtras.Location = new System.Drawing.Point(12, 12);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(122, 34);
+            this.btnAtras.TabIndex = 14;
+            this.btnAtras.Text = "<-  VOLVER";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // Mapa
             // 
@@ -222,6 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pj);
             this.Controls.Add(this.lblSantEnl);
             this.Controls.Add(this.lblHorno);
@@ -261,5 +275,6 @@
         private System.Windows.Forms.Label lblHorno;
         private System.Windows.Forms.Label lblSantEnl;
         private System.Windows.Forms.PictureBox pj;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

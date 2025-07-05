@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using Modelos;
@@ -55,6 +56,19 @@ namespace DatosFijos
             agregarJugador(new ClasesFijas().crearCaballero());
             agregarJugador(new ClasesFijas().crearHechicero());
             agregarJugador(new ClasesFijas().crearLadron());
+        }
+
+        public Jugador buscarPersonajePorNombre(String nombreBuscado)
+        {
+            for (int i = 0; i < tamano; i++)
+            {
+                Jugador jugador = obtenerJugadorPorIndice(i);
+                if (jugador.nombre == nombreBuscado)
+                {
+                    return jugador;
+                }
+            }
+            return null;
         }
     }
 }

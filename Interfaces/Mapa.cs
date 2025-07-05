@@ -15,19 +15,24 @@ namespace Interfaces
 {
     public partial class Mapa : Form
     {
-        private ListaZonas grafoZonas;
         private NodoZona zonaActual;
-        public Mapa(ListaZonas grafo, Bitmap img)
+        public Mapa(Bitmap img)
         {
             InitializeComponent();
-            grafoZonas = grafo;
-            zonaActual = grafoZonas.inicioLista;
             pj.Image = img;
         }
 
         private void btnZonaForSen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Inicio inicio = new Inicio();
+            SeleccionPersonaje seleccionPersonaje = new SeleccionPersonaje(inicio);
+            seleccionPersonaje.Show();
         }
     }
 }
