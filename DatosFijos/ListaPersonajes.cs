@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Modelos;
 
-namespace Modelos
+namespace DatosFijos
 {
-    public class ListaObjetos
+    public class ListaJugador
     {
-        NodoObjetos inicio = null;
-        NodoObjetos fin = null;
+        NodoJugador inicio = null;
+        NodoJugador fin = null;
         int tamano = 0;
 
-        public void agregar(Objeto objeto)
+        public void agregarJugador(Jugador jugador)
         {
-            NodoObjetos nuevo = new NodoObjetos();
-            nuevo.objeto = objeto;
+            NodoJugador nuevo = new NodoJugador();
+            nuevo.jugador = jugador;
+
             if (inicio == null)
             {
                 inicio = nuevo;
@@ -30,34 +32,29 @@ namespace Modelos
             tamano++;
         }
 
-        public Objeto obtenerPorIndice(int indice) //método para obtener un objeto por su índice/orden en la lista
+        public Jugador obtenerJugadorPorIndice(int indice) //método para obtener un ataque por su índice/orden en la lista
         {
             if (indice < 0 || indice >= tamano)
             {
                 return null; // o también se podría lanzar una excepción
             }
-            NodoObjetos actual = inicio;
+            NodoJugador actual = inicio;
             for (int i = 0; i < indice; i++)
             {
                 actual = actual.siguiente;
             }
-            return actual.objeto;
+            return actual.jugador;
         }
 
-        public int obtenerTamano()
+        public int obtenerTamanoJugadores()
         {
             return tamano;
         }
-        public void mostrar()
+        public void asignarPersonaje()
         {
-            NodoObjetos actual = inicio;
-            int i = 1;
-            while (actual != null)
-            {
-                Console.WriteLine(i + ". " + actual.objeto.nombre + " - Tipo: " + actual.objeto.tipo);
-                actual = actual.siguiente;
-                i++;
-            }
+            agregarJugador(new ClasesFijas().crearCaballero());
+            agregarJugador(new ClasesFijas().crearHechicero());
+            agregarJugador(new ClasesFijas().crearLadron());
         }
     }
 }

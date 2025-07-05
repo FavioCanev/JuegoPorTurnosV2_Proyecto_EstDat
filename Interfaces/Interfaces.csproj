@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mapa.resx">
+      <DependentUpon>Mapa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,7 +110,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SeleccionPersonaje.resx">
+      <DependentUpon>SeleccionPersonaje.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +127,41 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatosFijos\DatosFijos.csproj">
+      <Project>{f1dfb85f-e510-422b-bf9e-d5a0ec6b9d54}</Project>
+      <Name>DatosFijos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Estructuras\Estructuras.csproj">
+      <Project>{551b0a0b-e79c-4b82-a21d-7a30dcd0a12f}</Project>
+      <Name>Estructuras</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Grafo\Grafo.csproj">
+      <Project>{ba3af430-af6b-4171-b569-8864c51a54d7}</Project>
+      <Name>Grafo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jugabilidad\Jugabilidad.csproj">
+      <Project>{cd309dec-39f7-4513-b49b-26684f4ff4d0}</Project>
+      <Name>Jugabilidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{b36e3be1-2864-45bb-9c25-d95ba35f6094}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidad\Utilidad.csproj">
+      <Project>{f66dab5b-dc36-4deb-9c0a-e5a0525ba9a0}</Project>
+      <Name>Utilidad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Renders\Orstein-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Renders\Patches-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Renders\Ranni-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

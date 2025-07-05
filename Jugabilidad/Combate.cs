@@ -62,11 +62,11 @@ namespace Jugabilidad
         {
             Console.Clear();
             Console.WriteLine("=== TU TURNO ===\n");
-            jugador.ataques.mostrar();
+            //jugador.listaAtaques.mostrar();
             Console.WriteLine("Selecciona un ataque (1-4): ");
             int opcion = int.Parse(Console.ReadLine());
 
-            Ataque atq = jugador.ataques.obtenerPorIndice(opcion - 1);//-1 porque los índices de la lista comienzan en 0
+            Ataque atq = jugador.obtenerAtaquePorIndice(opcion - 1);//-1 porque los índices de la lista comienzan en 0
 
             boss.vida = boss.vida - atq.dano;
             historial.apilar(atq);// Guarda el ataque en el historial/pila
@@ -79,7 +79,7 @@ namespace Jugabilidad
             Console.Clear();
             Console.WriteLine("=== TURNO DEL BOSS ===\n");
             int rand = random.Next(4);
-            Ataque ataque = boss.ataques.obtenerPorIndice(rand);
+            Ataque ataque = boss.obtenerAtaquePorIndice(rand);
 
             jugador.vida = jugador.vida - ataque.dano;
             //historial.apilar(ataque); // Guarda el ataque en el historial/pila. si es que se quiere apilar también los ataques que ha hecho el boss

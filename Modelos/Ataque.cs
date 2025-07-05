@@ -9,8 +9,8 @@ namespace Modelos
     public class Ataque
     {
         //atributos con sus getters y setters para buenas prácticas de POO
-        public string nombre { get; set; }
-        public int dano { get; set; }
+        public string nombre;
+        public int dano;
 
 
         // Constructor de la clase Ataque
@@ -18,6 +18,15 @@ namespace Modelos
         {
             this.nombre = nombre;
             this.dano = dano;
+        }
+
+        public string[] dataAtaques()
+        {
+            string[] dt=new string[2];
+            dt[0] = nombre;
+            dt[1] = dano.ToString();
+
+            return dt;
         }
     }
 }

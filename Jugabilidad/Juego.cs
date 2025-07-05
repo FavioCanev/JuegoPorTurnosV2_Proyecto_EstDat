@@ -34,7 +34,7 @@ namespace Jugabilidad
             Console.ReadKey();
         }
 
-        private void seleccionarPersonaje()
+        public void seleccionarPersonaje()
         {
             ClasesFijas clases = new ClasesFijas();
             Console.Clear();
@@ -61,7 +61,7 @@ namespace Jugabilidad
             }
         }
 
-        private void prepararMapa()
+        public void prepararMapa()
         {
             //se inicializan las estructuras de datos necesarias para el juego
             listaZonas = new ListaZonas(7);//grafo
@@ -70,7 +70,7 @@ namespace Jugabilidad
 
             //se cargan los bosses y objetos fijos
             BossesFijos bossesFijos = new BossesFijos();
-            Objeto[] objetos = new ObjetosFijos().obtenerObjetos();
+            Objeto[] objetos = new ObjetosFijos().crearObjetos();
             Boss[] bosses = new Boss[]
             {
                 bossesFijos.crearArtorias(),
@@ -141,9 +141,9 @@ namespace Jugabilidad
             }
             else if (objetoObtenido.tipo == "dano")
             {
-                for (int i = 0; i < jugador.ataques.obtenerTamano()/*aquí podría también haber usado un getLenght en lugar de crear un método solo para sacar el tamaño, solo que me di cuenta ya tarde xd*/; i++)
+                for (int i = 0; i < jugador.obtenerTamanoAtaques()/*aquí podría también haber usado un getLenght en lugar de crear un método solo para sacar el tamaño, solo que me di cuenta ya tarde xd*/; i++)
                 {
-                    Ataque ataque = jugador.ataques.obtenerPorIndice(i);
+                    Ataque ataque = jugador.obtenerAtaquePorIndice(i);
                     ataque.dano = ataque.dano + objetoObtenido.valor;
                     Console.WriteLine($"El ataque {ataque.nombre} ha aumentado su daño en +{objetoObtenido.valor} puntos");
                 }

@@ -8,8 +8,8 @@ namespace Modelos
 {
     public class Jugador : Criatura
     {
-        public string clase { get; set; }
-        public ListaObjetos Objetos { get; set; } // lista de objetos que tiene el jugador
+        public string clase;
+        public ListaObjetos Objetos; // lista de objetos que tiene el jugador
 
         public Jugador(string nombre, int vida, string clase) : base(nombre, vida)
         //el base se utiliza para llamar de nuevo al constructor de Criatura y así no tener que poner de nuevo el this.nombre, this.vida, etc
@@ -17,5 +17,7 @@ namespace Modelos
         {
             this.clase = clase;
         }
+
+
     }
 }

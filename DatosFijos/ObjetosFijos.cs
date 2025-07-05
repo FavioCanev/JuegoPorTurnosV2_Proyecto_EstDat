@@ -9,7 +9,7 @@ namespace DatosFijos
 {
     public class ObjetosFijos
     {
-        public Objeto[] obtenerObjetos()
+        public Objeto[] crearObjetos()
         {
             Objeto[] objetos = new Objeto[7];
 

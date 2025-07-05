@@ -8,9 +8,9 @@ namespace Modelos
 {
     public class Objeto
     {
-        public string nombre { get; set; }
-        public string tipo { get; set; } // aumento de vida o de daño
-        public int valor { get; set; }
+        public string nombre;
+        public string tipo; // aumento de vida o de daño
+        public int valor;
 
         public Objeto(string nombre, string tipo, int valor)
         {

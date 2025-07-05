@@ -50,6 +50,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DatosFijos\DatosFijos.csproj">
+      <Project>{f1dfb85f-e510-422b-bf9e-d5a0ec6b9d54}</Project>
+      <Name>DatosFijos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Grafo\Grafo.csproj">
       <Project>{ba3af430-af6b-4171-b569-8864c51a54d7}</Project>
       <Name>Grafo</Name>

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grafo;
+using DatosFijos;
+using Modelos;
 
 namespace Estructuras
 {
@@ -15,7 +18,39 @@ namespace Estructuras
         {
             ma = new int [n, n];
         }
+        //métodos para la lista enlazada
+        //este método es para que no se ingresen más zonas de las que permite la matriz de adyacencia 
+        public void registrarVerticeZona(Zona zona)
+        {
+            for (int i = 0; i < ma.GetLength(0); i++)
+            {
+                insertarZonaALista(zona); //insertamos la zona en la lista
+            }
+        }
 
+        private void insertarZonaALista(Zona zona)
+        {
+            NodoZona nuevaZona = new NodoZona();
+            nuevaZona.zona = zona;
+
+            if (inicioLista == null) //si la lista está vacía
+            {
+                inicioLista = nuevaZona; //asignamos el nuevo nodo como inicio
+            }
+            else //si ya hay nodos en la lista
+            {
+                NodoZona temp = inicioLista; //creamos un nodo temporal para recorrer la lista
+                while (temp.siguiente != null) //recorremos hasta el final de la lista
+                {
+                    temp = temp.siguiente;
+                }
+                temp.siguiente = nuevaZona; //insertamos el nuevo nodo al final de la lista
+            }
+        }
+
+
+
+        //métodos para la matriz
         public void llenarMatriz()
         {
             //matríz por defecto para conectar el mapa
@@ -105,7 +140,7 @@ namespace Estructuras
                 tempOrigen = tempOrigen.siguiente; //avanzamos al siguiente origen
             }
         }
-
+        //te devuelva los vertices adyacentes
         public void navegarGrafo(NodoZona actual)
         {
             Console.WriteLine("Recorriendo el mapa: ");
@@ -237,6 +272,32 @@ namespace Estructuras
                 default: Console.WriteLine("Opción no válida"); break;
             }
             Console.ReadKey();
+        }
+
+
+        //método para asignar bosses y objetos a las zonas
+        public void asignarZonasBossesObjetos()
+        {
+            ListaBosses listaBosses = new ListaBosses();
+            ObjetosFijos objetosFijos = new ObjetosFijos();
+            Random random = new Random();
+            listaBosses.asignarBosses();
+            objetosFijos.crearObjetos();
+            for (int i = 0; i < ma.GetLength(0); i++)
+            {
+                string nombreZona = "Zona " + (i + 1);
+                Boss bossZona = listaBosses.obtenerBossPorIndice(random.Next(listaBosses.obtenerTamanoBosses()));
+                Objeto recompensa = objetosFijos.crearObjetos()[random.Next(0, objetosFijos.crearObjetos().Length)];
+                Zona zona = new Zona(nombreZona, bossZona, recompensa);
+                registrarVerticeZona(zona);
+            }
+        }
+
+        public void conectarListaAGrafo()
+        {
+            llenarMatriz();
+            asignarZonasBossesObjetos();
+            crearGrafo();
         }
     }
 }
