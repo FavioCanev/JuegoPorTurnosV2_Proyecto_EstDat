@@ -12,8 +12,6 @@ namespace Modelos
         public int vida;
         public Ataque listaAtaques;
 
-        //para verificar si la criatura está viva(solo es de lectura, no modificable)
-
         public Criatura(string nombre, int vida)
         {
             this.nombre = nombre;

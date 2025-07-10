@@ -190,12 +190,14 @@ namespace Interfaces
                 return;
             }
 
-            atacarABoss(indiceAtaque);
+            atacarABoss(indiceAtaque);//atacamos al boss con el ataque seleccionado por el jugador
 
             if (!zonaActual.bossZona.estaVivo())//verificamos si el boss está muerto
             {
-                MessageBox.Show("¡Has derrotado al boss!");
+                MessageBox.Show("¡Has derrotado al boss de esta zona!");
                 jugadorActual.objetos.agregar(zonaActual.recompensa);//agregamos el objeto obtenido al jugador actual
+                applicarObjetoaAJugador();//aplicamos los efectos del objeto al jugador
+
                 volverAlMapa();
                 return;
                 //aquí falta mostrar la ventana de zona completada con el objeto obtenido al derrotar al boss, y aplicar los efectos del objeto al jugador
@@ -225,7 +227,7 @@ namespace Interfaces
 
             if (!jugadorActual.estaVivo())
             {
-                MessageBox.Show("¡Has sido derrotado!");
+                MessageBox.Show("¡Has sido derrotado! Por: " + zonaActual.bossZona.nombre);
                 this.Close();
                 Inicio inicio = new Inicio();
                 inicio.Show();
@@ -252,6 +254,25 @@ namespace Interfaces
             resumenObjetos = new ResumenObjetos(jugadorActual);
             resumenObjetos.agregarObjetoATabla();
             resumenObjetos.Show();
+        }
+
+        private void applicarObjetoaAJugador()
+        {
+            for (int i = 0; i < jugadorActual.objetos.obtenerTamano(); i++)
+            {
+                if (jugadorActual.objetos.obtenerPorIndice(i).tipo == "vida")
+                {
+                    jugadorActual.vida = jugadorActual.vida + jugadorActual.objetos.obtenerPorIndice(i).valor;
+                }
+                else if (jugadorActual.objetos.obtenerPorIndice(i).tipo == "dano")
+                {
+                    for ( int j = 0; j < jugadorActual.obtenerTamanoAtaques(); j++)
+                    {
+                        //aquí se le suma el valor del objeto al daño de cada ataque del jugador
+                        jugadorActual.obtenerAtaquePorIndice(j).dano = jugadorActual.obtenerAtaquePorIndice(j).dano + jugadorActual.objetos.obtenerPorIndice(i).valor;
+                    }
+                }
+            }
         }
 
         //también falta apilar los ataques utilizados por el jugador en cada turno

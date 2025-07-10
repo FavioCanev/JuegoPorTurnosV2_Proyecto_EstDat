@@ -32,21 +32,83 @@ namespace Interfaces
         {
             lblSantEnl.Text = listaZonas.obtenerZonaPorIndice(0).nombrZona;
 
+            
             lblForSen.Text = listaZonas.obtenerZonaPorIndice(1).nombrZona;
-            lblAnorLon.Text = listaZonas.obtenerZonaPorIndice(2).nombrZona;
-            lblFarumAz.Text = listaZonas.obtenerZonaPorIndice(3).nombrZona;
-            lblArbMiq.Text = listaZonas.obtenerZonaPorIndice(4).nombrZona;
-            lblAbis.Text = listaZonas.obtenerZonaPorIndice(5).nombrZona;
-            lblHorno.Text = listaZonas.obtenerZonaPorIndice(6).nombrZona;
-
-
-            if (jugadorActual.tieneObjetos())
+            if (listaZonas.obtenerZonaPorIndice(1).bossZona.estaVivo())
             {
-                btnVerObjetos.Visible = true; // Muestra el botón si el jugador tiene objetos
+                btnZonaForSen.Enabled = true; // Habilita el botón si la zona está desbloqueada
             }
             else
             {
-                btnVerObjetos.Visible = false; // Oculta el botón si no tiene objetos
+                btnZonaForSen.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaForSen.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaForSen.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            lblAnorLon.Text = listaZonas.obtenerZonaPorIndice(2).nombrZona;
+            if (listaZonas.obtenerZonaPorIndice(2).bossZona.estaVivo())
+            {
+                btnZonaAnor.Enabled = true; // Habilita el botón si la zona está desbloqueada
+            }
+            else
+            {
+                btnZonaAnor.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaAnor.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaAnor.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            lblFarumAz.Text = listaZonas.obtenerZonaPorIndice(3).nombrZona;
+            if (listaZonas.obtenerZonaPorIndice(3).bossZona.estaVivo())
+            {
+                btnZonaFarumAz.Enabled = true; // Habilita el botón si la zona está desbloqueada
+            }
+            else
+            {
+                btnZonaFarumAz.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaFarumAz.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaFarumAz.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            lblArbMiq.Text = listaZonas.obtenerZonaPorIndice(4).nombrZona;
+            if (listaZonas.obtenerZonaPorIndice(4).bossZona.estaVivo())
+            {
+                btnZonaArbMiq.Enabled = true; // Habilita el botón si la zona está desbloqueada
+            }
+            else
+            {
+                btnZonaArbMiq.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaArbMiq.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaArbMiq.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            lblAbis.Text = listaZonas.obtenerZonaPorIndice(5).nombrZona;
+            if (listaZonas.obtenerZonaPorIndice(5).bossZona.estaVivo())
+            {
+                btnZonaAbis.Enabled = true; // Habilita el botón si la zona está desbloqueada
+            }
+            else
+            {
+                btnZonaAbis.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaAbis.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaAbis.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            lblHorno.Text = listaZonas.obtenerZonaPorIndice(6).nombrZona;
+            if (listaZonas.obtenerZonaPorIndice(6).bossZona.estaVivo())
+            {
+                btnZonaHorno.Enabled = true; // Habilita el botón si la zona está desbloqueada
+            }
+            else
+            {
+                btnZonaHorno.Enabled = false; // Deshabilita el botón si la zona no está desbloqueada
+                btnZonaHorno.Size = new Size(150, 50); // Cambia el tamaño del botón si el boss está derrotado
+                btnZonaHorno.Text = "Boss derrotado"; // Cambia el texto del botón si el boss está derrotado
+            }
+            
+
+            //verifica si el jugador tiene objetos y muestra el botón correspondiente
+            if (jugadorActual.tieneObjetos())
+            {
+                btnVerObjetos.Visible = true; //muestra el botón si el jugador tiene objetos
+            }
+            else
+            {
+                btnVerObjetos.Visible = false; //oculta el botón si no tiene objetos
             }
         }
 
