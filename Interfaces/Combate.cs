@@ -20,16 +20,19 @@ namespace Interfaces
         private Jugador jugadorActual;
         private Bitmap bitmapPersonaje;
         private ColaTurnos cola;
-        private PilaHistorial pila;
         private ResumenObjetos resumenObjetos;
-        private ListaObjetos objetosObtenidos; // <--- sin "= new ListaObjetos()"
-        public Combate(Bitmap personaje, Zona zona, Jugador jugador)
+        private ListaObjetos objetosObtenidos;
+        private ListaZonas listaZonas;
+        public PilaHistorial pila = new PilaHistorial();
+
+        public Combate(Bitmap personaje, Zona zona, Jugador jugador, ListaZonas zonas)
         {
             InitializeComponent();
             zonaActual = zona;
             jugadorActual = jugador;
             bitmapPersonaje = personaje;
             pbPersonajeCombate.Image = personaje;
+            listaZonas = zonas;
 
             objetosObtenidos = jugadorActual.objetos ?? new ListaObjetos();
             jugadorActual.objetos = objetosObtenidos;
@@ -135,6 +138,8 @@ namespace Interfaces
             Ataque ataqueUsado = jugadorActual.obtenerAtaquePorIndice(indice);
             MessageBox.Show($"Has usado {ataqueUsado.nombre} con un daño de {ataqueUsado.dano}", "Ataque", MessageBoxButtons.OK);
             zonaActual.bossZona.vida = zonaActual.bossZona.vida - ataqueUsado.dano;
+            pila.apilar(ataqueUsado); //apilamos el ataque realizado por el Jugador
+
             mostrarLabelsDelCombate();
         }
 
@@ -198,6 +203,13 @@ namespace Interfaces
                 jugadorActual.objetos.agregar(zonaActual.recompensa);//agregamos el objeto obtenido al jugador actual
                 applicarObjetoaAJugador();//aplicamos los efectos del objeto al jugador
 
+                if (!zonaActual.bossZona.estaVivo() && zonaActual == listaZonas.obtenerZonaPorIndice(6))
+                {
+                    FinJuego fin = new FinJuego(pila);
+                    this.Hide();
+                    fin.Show();
+                    return;
+                }
                 volverAlMapa();
                 return;
                 //aquí falta mostrar la ventana de zona completada con el objeto obtenido al derrotar al boss, y aplicar los efectos del objeto al jugador

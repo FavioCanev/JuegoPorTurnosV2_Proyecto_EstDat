@@ -125,42 +125,42 @@ namespace Interfaces
         //todos los botones de las zonas del mapa, al hacer click en uno de ellos, se abre un combate con la zona correspondiente y el jugador actual
         private void btnZonaForSen_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(1), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(1), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
 
         private void btnZonaAnor_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(2), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(2), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
 
         private void btnZonaFarumAz_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(3), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(3), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
 
         private void btnZonaArbMiq_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(4), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(4), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
 
         private void btnZonaAbis_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(5), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(5), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
 
         private void btnZonaHorno_Click(object sender, EventArgs e)
         {
-            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(6), jugadorActual);
+            Combate comb = new Combate(personajeImg, listaZonas.obtenerZonaPorIndice(6), jugadorActual, listaZonas);
             this.Close();
             comb.Show();
         }
@@ -175,6 +175,18 @@ namespace Interfaces
             }
             resumenObjetos.agregarObjetoATabla();
             resumenObjetos.ShowDialog(); // Muestra el formulario de resumen de objetos como un diálogo modal
+        }
+
+        public void verificarFinJuego(ListaZonas listaZonas, PilaHistorial pila)
+        {
+            Zona zonaFinal = listaZonas.obtenerZonaPorIndice(7);
+            if (zonaFinal.bossZona.estaVivo() == false)
+            {
+                // Si el boss de la última zona está derrotado, se muestra el formulario de fin de juego
+                FinJuego finJuego = new FinJuego(pila);
+                this.Hide(); // Oculta el mapa actual
+                finJuego.Show(); // Muestra el formulario de fin de juego
+            }
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="FinJuego.Designer.cs">
       <DependentUpon>FinJuego.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialAtaques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialAtaques.Designer.cs">
+      <DependentUpon>HistorialAtaques.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="Mapa.Designer.cs">
       <DependentUpon>Mapa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ObjetoObtenido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ObjetoObtenido.Designer.cs">
-      <DependentUpon>ObjetoObtenido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +98,12 @@
     </Compile>
     <EmbeddedResource Include="Combate.resx">
       <DependentUpon>Combate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinJuego.resx">
+      <DependentUpon>FinJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialAtaques.resx">
+      <DependentUpon>HistorialAtaques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
