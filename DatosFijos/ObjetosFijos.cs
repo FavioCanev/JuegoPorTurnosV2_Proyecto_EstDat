@@ -9,17 +9,16 @@ namespace DatosFijos
 {
     public class ObjetosFijos
     {
-        public Objeto[] crearObjetos()
+        public ListaObjetos crearObjetos()
         {
-            Objeto[] objetos = new Objeto[7];
-
-            objetos[0] = new Objeto("Frasco de Estus", "vida", 30);
-            objetos[1] = new Objeto("Fragmento de alma", "vida", 40);
-            objetos[2] = new Objeto("Lágrima de cristal", "vida", 50);
-            objetos[3] = new Objeto("Bendición divina", "vida", 60);
-            objetos[4] = new Objeto("Garra de bestia", "dano", 10);
-            objetos[5] = new Objeto("Espina de dragón", "dano", 15);
-            objetos[6] = new Objeto("Runa antigua", "dano", 20);
+            ListaObjetos objetos = new ListaObjetos();
+            objetos.agregar(new Objeto("Frasco de Estus", "vida", 30));
+            objetos.agregar(new Objeto("Fragmento de alma", "vida", 40));
+            objetos.agregar(new Objeto("Lágrima de cristal", "vida", 50));
+            objetos.agregar(new Objeto("Bendición divina", "vida", 60));
+            objetos.agregar(new Objeto("Garra de bestia", "dano", 10));
+            objetos.agregar(new Objeto("Espina de dragón", "dano", 15));
+            objetos.agregar(new Objeto("Runa antigua", "dano", 20));
 
             return objetos;
         }

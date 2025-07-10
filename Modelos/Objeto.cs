@@ -18,5 +18,14 @@ namespace Modelos
             this.tipo = tipo.ToLower(); // para evitar errores al comparar
             this.valor = valor;
         }
+
+        public string[] dataObjetos()
+        {
+            string[] dt = new string[3];
+            dt[0] = nombre;
+            dt[1] = tipo;
+            dt[2] = valor.ToString();
+            return dt;
+        }
     }
 }

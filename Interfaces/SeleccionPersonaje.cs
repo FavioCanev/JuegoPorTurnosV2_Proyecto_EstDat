@@ -19,6 +19,7 @@ namespace Interfaces
     {
         ListaJugador lj = new ListaJugador();
 
+        //NOTA PARA DESPUÉS: podría borrar la referencia al formulario anterior que pide como parámetro el constructor, porque en el botón de "BT_Atras_Click" simplemente instancia la clase del formulario "Inicio" y la muestra cuando presionamos el botón, por lo tanto no haría falta pedir como parámetro un formulario en este constructor. No lo quito ahora porque tendría que limpiar mucho código, y ahora mismo no tengo tiempo
         public SeleccionPersonaje(Form anterior) //guardamos la referencia al formulario anterior
         {
 
@@ -43,10 +44,10 @@ namespace Interfaces
 
             if (jugadorSeleccionado != null)
             {
-                DG_TablaAtaques.Rows.Clear();
+                dgvTablaAtaques.Rows.Clear();
                 for (int i = 0; i < jugadorSeleccionado.obtenerTamanoAtaques(); i++)
                 {
-                    DG_TablaAtaques.Rows.Add(jugadorSeleccionado.obtenerAtaquePorIndice(i).dataAtaques());
+                    dgvTablaAtaques.Rows.Add(jugadorSeleccionado.obtenerAtaquePorIndice(i).dataAtaques());
                 }
 
                 // Cambia la imagen según el nombre  
@@ -77,12 +78,11 @@ namespace Interfaces
 
         private void BT_Confirmar_Click(object sender, EventArgs e)
         {
-
             //Aunque el catch evita que la aplicación se cierre abruptamente, es mejor prevenir la excepción comprobando explícitamente si hay un elemento seleccionado antes de intentar acceder a él
             if (CB_CuadroDesplegablePersonajes.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, selecciona un personaje antes de continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Por favor, selecciona un personaje antes de continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;// evita que el código continúe ejecutándose si no hay un personaje seleccionado
             }
 
             string personajeSeleccionado = CB_CuadroDesplegablePersonajes.SelectedItem.ToString();//guarda el personaje seleccionado en un string
@@ -92,7 +92,7 @@ namespace Interfaces
 
             Bitmap img = null;//un bitmap es una imagen que se puede manipular en C#
 
-            // Cambia la imagen según el nombre  
+            //toma la imágen del personaje seleccionado y la guarda en una variable Bitmap, para luego pasarla como parámetro al constructor del mapa
             if (jugadorSeleccionado.nombre == "Orstein asesino de dragones")
             {
                 img = Interfaces.Properties.Resources.Orstein_removebg_preview;
@@ -105,7 +105,10 @@ namespace Interfaces
             {
                 img = Interfaces.Properties.Resources.Ranni_removebg_preview;
             }
-            Mapa mapa = new Mapa(img); // Usamos la instancia de ListaZonas y le pasamos la imagen del personaje seleccionado como parámetro al constructor del mapa
+            Mapa mapa = new Mapa(img, jugadorSeleccionado); // Usamos la instancia de ListaZonas y le pasamos la imagen del personaje seleccionado como parámetro al constructor del mapa
+
+            //aquí necesito pasarle un jugador a la clase Mapa, para que luego en el mapa se pueda usar el personaje seleccionado en el combate, el jugador está guardado actualmente en la variable jugadorSeleccionado
+
             this.Hide(); // Oculta el formulario de selección de personaje
             mapa.Show(); // Muestra el mapa  }
         }

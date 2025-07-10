@@ -63,6 +63,66 @@ namespace Interfaces.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Artorias_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Artorias-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gael_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Gael-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GargolasCampanario_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("GargolasCampanario-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gwyn_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Gwyn-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Malenia_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Malenia-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maliketh_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Maliketh-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Orstein_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Orstein_removebg_preview", resourceCulture);
@@ -76,6 +136,16 @@ namespace Interfaces.Properties {
         internal static System.Drawing.Bitmap Patches_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Patches_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Placidusax_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Placidusax-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

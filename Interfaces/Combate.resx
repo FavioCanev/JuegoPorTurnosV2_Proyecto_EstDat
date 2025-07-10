@@ -117,35 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Ranni_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\Ranni-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Patches_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\Patches-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Orstein_removebg_preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\Orstein-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Artorias-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Artorias-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gael-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Gael-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GargolasCampanario-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\GargolasCampanario-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gwyn-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Gwyn-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Malenia-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Malenia-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maliketh-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Maliketh-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Placidusax-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renders\BossesRenders\Placidusax-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timerBoss.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="timerPersonaje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>142, 17</value>
+  </metadata>
 </root>

@@ -55,5 +55,29 @@ namespace Estructuras
             frente = null; 
             final = null; 
         }
+
+        public Criatura obtenerTurnoActual()
+        {
+            //aquí también utilizamos un operador ternario para devolver la criatura en el frente de la cola, o null si está vacía
+            return frente != null ? frente.elemento : null;
+        }
+
+        public void avanzarTurno()
+        {
+            if (frente == null)
+            {
+                return; // Si la cola está vacía, no hacemos nada
+            }
+
+            Criatura actual = desencolar(); // Desencolamos al actual
+            if (actual.estaVivo()) // Verificamos si el actual está vivo
+            {
+                encolar(actual); // Si está vivo, lo volvemos a encolar al final
+            }
+            else
+            {
+                // Si no está vivo, simplemente no lo reencolamos y se pierde su turno
+            }
+        }
     }
 }

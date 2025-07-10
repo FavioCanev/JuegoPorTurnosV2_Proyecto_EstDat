@@ -13,7 +13,7 @@ namespace DatosFijos
         {
             Jugador caballero = new Jugador("Orstein asesino de dragones", 140, "Caballero");
             caballero.agregarAtaque(new Ataque("Rompepostura", 15)); //el siguiente ataque hace +150% de daño
-            caballero.agregarAtaque(new Ataque("Hoja del Caballero Negro", 25));
+            caballero.agregarAtaque(new Ataque("Hoja del Caballero Negro", 250));
             caballero.agregarAtaque(new Ataque("Lanza de Orstein", 20));
             caballero.agregarAtaque(new Ataque("Escudo de emblema de hierba", 0)); //-20 de daño en el siguiente ataque recibido
             return caballero;

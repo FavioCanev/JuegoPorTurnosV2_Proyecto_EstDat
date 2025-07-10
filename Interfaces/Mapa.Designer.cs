@@ -43,6 +43,7 @@
             this.lblSantEnl = new System.Windows.Forms.Label();
             this.pj = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnVerObjetos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pj)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.btnZonaAnor.TabIndex = 1;
             this.btnZonaAnor.Text = "ir";
             this.btnZonaAnor.UseVisualStyleBackColor = false;
+            this.btnZonaAnor.Click += new System.EventHandler(this.btnZonaAnor_Click);
             // 
             // btnZonaFarumAz
             // 
@@ -91,6 +93,7 @@
             this.btnZonaFarumAz.TabIndex = 2;
             this.btnZonaFarumAz.Text = "ir";
             this.btnZonaFarumAz.UseVisualStyleBackColor = false;
+            this.btnZonaFarumAz.Click += new System.EventHandler(this.btnZonaFarumAz_Click);
             // 
             // btnZonaArbMiq
             // 
@@ -106,6 +109,7 @@
             this.btnZonaArbMiq.TabIndex = 3;
             this.btnZonaArbMiq.Text = "ir";
             this.btnZonaArbMiq.UseVisualStyleBackColor = false;
+            this.btnZonaArbMiq.Click += new System.EventHandler(this.btnZonaArbMiq_Click);
             // 
             // btnZonaAbis
             // 
@@ -121,6 +125,7 @@
             this.btnZonaAbis.TabIndex = 4;
             this.btnZonaAbis.Text = "ir";
             this.btnZonaAbis.UseVisualStyleBackColor = false;
+            this.btnZonaAbis.Click += new System.EventHandler(this.btnZonaAbis_Click);
             // 
             // btnZonaHorno
             // 
@@ -136,6 +141,7 @@
             this.btnZonaHorno.TabIndex = 5;
             this.btnZonaHorno.Text = "ir";
             this.btnZonaHorno.UseVisualStyleBackColor = false;
+            this.btnZonaHorno.Click += new System.EventHandler(this.btnZonaHorno_Click);
             // 
             // lblForSen
             // 
@@ -229,12 +235,26 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // btnVerObjetos
+            // 
+            this.btnVerObjetos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVerObjetos.Font = new System.Drawing.Font("OptimusPrincepsSemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerObjetos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerObjetos.Location = new System.Drawing.Point(1067, 12);
+            this.btnVerObjetos.Name = "btnVerObjetos";
+            this.btnVerObjetos.Size = new System.Drawing.Size(165, 34);
+            this.btnVerObjetos.TabIndex = 15;
+            this.btnVerObjetos.Text = "Ver Objetos";
+            this.btnVerObjetos.UseVisualStyleBackColor = false;
+            this.btnVerObjetos.Click += new System.EventHandler(this.btnVerObjetos_Click);
+            // 
             // Mapa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnVerObjetos);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.pj);
             this.Controls.Add(this.lblSantEnl);
@@ -253,7 +273,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mapa";
             this.Text = "Mapa";
-            this.Load += new System.EventHandler(this.Mapa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pj)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,5 +296,6 @@
         private System.Windows.Forms.Label lblSantEnl;
         private System.Windows.Forms.PictureBox pj;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnVerObjetos;
     }
 }

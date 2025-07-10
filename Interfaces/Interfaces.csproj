@@ -96,6 +96,9 @@
     <Compile Include="ZonaCompletada.Designer.cs">
       <DependentUpon>ZonaCompletada.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Combate.resx">
+      <DependentUpon>Combate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +115,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResumenObjetos.resx">
+      <DependentUpon>ResumenObjetos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SeleccionPersonaje.resx">
       <DependentUpon>SeleccionPersonaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,10 +147,6 @@
       <Project>{ba3af430-af6b-4171-b569-8864c51a54d7}</Project>
       <Name>Grafo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Jugabilidad\Jugabilidad.csproj">
-      <Project>{cd309dec-39f7-4513-b49b-26684f4ff4d0}</Project>
-      <Name>Jugabilidad</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modelos\Modelos.csproj">
       <Project>{b36e3be1-2864-45bb-9c25-d95ba35f6094}</Project>
       <Name>Modelos</Name>
@@ -162,6 +164,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\Renders\Ranni-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recursos\Renders\BossesRenders\Artorias-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\Gael-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\GargolasCampanario-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\Gwyn-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\Malenia-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\Maliketh-removebg-preview.png" />
+    <Content Include="Recursos\Renders\BossesRenders\Placidusax-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

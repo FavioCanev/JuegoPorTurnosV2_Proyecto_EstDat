@@ -32,7 +32,7 @@
             this.LB_NombrePersonaje = new System.Windows.Forms.Label();
             this.LB_ListaMovimientos = new System.Windows.Forms.Label();
             this.CB_CuadroDesplegablePersonajes = new System.Windows.Forms.ComboBox();
-            this.DG_TablaAtaques = new System.Windows.Forms.DataGridView();
+            this.dgvTablaAtaques = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Daño = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LB_ClaseMostrar = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.BT_Confirmar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.PB_Personaje = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_TablaAtaques)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaAtaques)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Personaje)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,21 +110,21 @@
             this.CB_CuadroDesplegablePersonajes.TabIndex = 7;
             this.CB_CuadroDesplegablePersonajes.SelectedIndexChanged += new System.EventHandler(this.CB_CuadroDesplegablePersonajes_SelectedIndexChanged);
             // 
-            // DG_TablaAtaques
+            // dgvTablaAtaques
             // 
-            this.DG_TablaAtaques.AllowUserToAddRows = false;
-            this.DG_TablaAtaques.AllowUserToDeleteRows = false;
-            this.DG_TablaAtaques.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_TablaAtaques.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTablaAtaques.AllowUserToAddRows = false;
+            this.dgvTablaAtaques.AllowUserToDeleteRows = false;
+            this.dgvTablaAtaques.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablaAtaques.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Daño});
-            this.DG_TablaAtaques.Location = new System.Drawing.Point(33, 268);
-            this.DG_TablaAtaques.Name = "DG_TablaAtaques";
-            this.DG_TablaAtaques.ReadOnly = true;
-            this.DG_TablaAtaques.RowHeadersWidth = 51;
-            this.DG_TablaAtaques.RowTemplate.Height = 24;
-            this.DG_TablaAtaques.Size = new System.Drawing.Size(609, 320);
-            this.DG_TablaAtaques.TabIndex = 8;
+            this.dgvTablaAtaques.Location = new System.Drawing.Point(33, 268);
+            this.dgvTablaAtaques.Name = "dgvTablaAtaques";
+            this.dgvTablaAtaques.ReadOnly = true;
+            this.dgvTablaAtaques.RowHeadersWidth = 51;
+            this.dgvTablaAtaques.RowTemplate.Height = 24;
+            this.dgvTablaAtaques.Size = new System.Drawing.Size(609, 320);
+            this.dgvTablaAtaques.TabIndex = 8;
             // 
             // Nombre
             // 
@@ -220,7 +220,7 @@
             this.Controls.Add(this.BT_Confirmar);
             this.Controls.Add(this.LB_PuntosVidaMostrar);
             this.Controls.Add(this.LB_ClaseMostrar);
-            this.Controls.Add(this.DG_TablaAtaques);
+            this.Controls.Add(this.dgvTablaAtaques);
             this.Controls.Add(this.CB_CuadroDesplegablePersonajes);
             this.Controls.Add(this.LB_ListaMovimientos);
             this.Controls.Add(this.LB_NombrePersonaje);
@@ -230,7 +230,7 @@
             this.Controls.Add(this.PB_Personaje);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeleccionPersonaje";
-            ((System.ComponentModel.ISupportInitialize)(this.DG_TablaAtaques)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablaAtaques)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Personaje)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,7 +244,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LB_NombrePersonaje;
         private System.Windows.Forms.Label LB_ListaMovimientos;
-        private System.Windows.Forms.DataGridView DG_TablaAtaques;
+        private System.Windows.Forms.DataGridView dgvTablaAtaques;
         private System.Windows.Forms.Label LB_ClaseMostrar;
         private System.Windows.Forms.Label LB_PuntosVidaMostrar;
         private System.Windows.Forms.Button BT_Confirmar;
